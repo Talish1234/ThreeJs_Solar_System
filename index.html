@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Solar System Simulation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css"> 
+</head>
+<body>
+    <div id="canvas-container">
+        <div class="loading" id="loading">
+            <div>Loading Solar System...</div>
+        </div>
+
+        <div id="control-panel">
+            <div class="panel-header">
+                <h2> Solar System Controls</h2>
+                <button class="minimize-btn" id="minimize-btn">+</button>
+            </div>
+
+            <div class="panel-content hidden">
+                <div class="main-controls">
+                    <button class="control-btn" id="pause-btn">Pause</button>
+                    <button class="control-btn" id="theme-toggle">Theme</button>
+                </div>
+
+                <div class="global-speed-control">
+                    <label for="global-speed">Global Speed Multiplier</label>
+                    <div class="control-row">
+                        <input type="range" id="global-speed" min="0" max="5" step="0.1" value="1">
+                        <div class="speed-display" id="global-speed-display">1.0x</div>
+                        <button class="reset-btn" id="reset-global">Reset</button>
+                    </div>
+                </div>
+
+                <div id="planet-controls">
+                </div>
+
+                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                    <button class="control-btn" id="reset-all" style="width: 100%; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);">
+                      Reset All Speeds
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="info-panel">
+            <div id="planet-info">
+                <div class="planet-name">Solar System</div>
+                <div id="planet-details">
+                <div>Hover over planets to see details</div>
+                <div>Use mouse to rotate view</div>
+                <div>Scroll to zoom in/out</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
