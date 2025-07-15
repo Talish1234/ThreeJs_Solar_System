@@ -26,4 +26,4 @@
    ```bash
    git clone https://github.com/your-username/solar-system-simulation.git
 2. **Open index.html**
-   Opem index.html
+ 
